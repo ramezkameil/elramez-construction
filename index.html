@@ -5,13 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>شركة الرامز للمقاولات (El Ramez Construction)</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f5f5f5; }
-    header { background: #003366; color: #fff; padding: 0; text-align: center; }
+    body { font-family: sans-serif; margin: 0; background: #f7f7f7; }
+
+    header {
+      background: linear-gradient(90deg, #00224e, #003366);
+      color: #fff;
+      text-align: center;
+      padding: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
     .hero-logo {
       width: 100%;
       height: auto;
       display: block;
       object-fit: contain;
+    }
+
+    .whatsapp-btn {
+      display: block;
+      margin: 15px auto;
+      background: #25D366;
+      color: #fff;
+      width: 220px;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
     }
 
     .hero {
@@ -25,8 +53,8 @@
     .hero h1 { margin-bottom: 10px; font-size: 32px; }
     .hero p { max-width: 500px; margin: auto; line-height: 1.7; }
 
-    .section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    .title { font-size: 26px; margin-bottom: 20px; text-align: center; }
+    .section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+    .title { font-size: 28px; margin-bottom: 25px; text-align: center; font-weight: bold; color:#00224e;}
 
     .projects {
       display: grid;
@@ -38,87 +66,106 @@
       background: #fff;
       border-radius: 10px;
       padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform .3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.09);
       text-align: center;
+      transition: transform .3s ease, box-shadow .3s ease;
+      animation: slideUp 1s ease-in-out;
     }
 
-    .card:hover { transform: translateY(-8px); }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
     .card img { width: 100%; border-radius: 8px; }
 
+    @keyframes slideUp {
+      from { opacity:0; transform: translateY(40px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+
+    /* قسم لماذا نحن */
+    .why {
+      display: grid;
+      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .why-box {
+      background:#fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align:center;
+      font-weight:bold;
+      color:#003366;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      animation: slideUp 1.2s ease-out;
+    }
+
     footer {
-      background: #003366;
+      background: #00224e;
       color: #fff;
       padding: 20px;
       text-align: center;
       margin-top: 40px;
     }
-
-    .whatsapp-btn {
-      display: block;
-      margin: 15px auto;
-      background: #25D366;
-      color: #fff;
-      width: 200px;
-      text-align: center;
-      padding: 10px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity:1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="logo.jpg" alt="لوجو الشركة" class="hero-logo" />
-    <h2 style="margin:10px 0;">شركة الرامز للمقاولات (El Ramez Construction)</h2>
-    <p style="margin:0; font-weight:bold;">إدارة الأستاذ: كميل رمزي</p>
-  </header>
+<header>
+  <img src="logo.jpg" alt="لوجو الشركة" class="hero-logo" />
+  <h2 style="margin:10px 0;">شركة الرامز للمقاولات (El Ramez Construction)</h2>
+  <p style="margin:0; font-weight:bold;">إدارة الأستاذ: كميل رمزي</p>
+</header>
 
-  <a href="https://wa.me/201287575747" class="whatsapp-btn">تواصل واتساب</a>
+<a href="https://wa.me/201287575747" class="whatsapp-btn">تواصل واتساب</a>
+<a href="about.html" class="whatsapp-btn" style="background:#003366;">من نحن</a>
 
-  <!-- زر صفحة من نحن -->
-  <a href="about.html" class="whatsapp-btn" style="background:#003366;">من نحن</a>
+<section class="hero">
+  <h1>أعمال تشطيبات وبناء باحترافية</h1>
+  <p>خبرة سنوات طويلة في إنشاء وتشطيب المشروعات السكنية والتجارية بأعلى جودة وأفضل تكلفة.</p>
+</section>
 
-  <section class="hero">
-    <h1>أعمال تشطيبات وبناء باحترافية</h1>
-    <p>خبرة سنوات طويلة في إنشاء وتشطيب المشروعات السكنية والتجارية بأعلى جودة وأفضل تكلفة.</p>
-  </section>
-
-  <section class="section">
-    <h3 class="title">بعض أعمالنا</h3>
-    <div class="projects">
-      <div class="card">
-        <img src="project1.jpg" alt="مشروع 1" />
-        <h4>أعمال تشطيبات بالعاصمة الإدارية</h4>
-      </div>
-      <div class="card">
-        <img src="project2.jpg" alt="مشروع 2" />
-        <h4>حدادة وصب خط المترو بالإسكندرية</h4>
-      </div>
-      <div class="card">
-        <img src="project3.jpg" alt="مشروع 3" />
-        <h4>مشروع الأوبرا بالعاصمة الإدارية (تم التسليم)</h4>
-      </div>
+<section class="section">
+  <h3 class="title">بعض أعمالنا</h3>
+  <div class="projects">
+    <div class="card">
+      <img src="project1.jpg" alt="مشروع 1" />
+      <h4>أعمال تشطيبات بالعاصمة الإدارية</h4>
     </div>
-  </section>
+    <div class="card">
+      <img src="project2.jpg" alt="مشروع 2" />
+      <h4>حدادة وصب خط المترو بالإسكندرية</h4>
+    </div>
+    <div class="card">
+      <img src="project3.jpg" alt="مشروع 3" />
+      <h4>مشروع الأوبرا بالعاصمة الإدارية (تم التسليم)</h4>
+    </div>
+  </div>
+</section>
 
-  <section class="section" style="text-align:center;">
-    <h3 class="title">تواصل معنا</h3>
-    <p>📞 <a href="tel:01287575747" style="color:#003366; font-weight:bold;">اتصل الآن</a></p>
-    <p>📍 القاهرة - مصر</p>
-    <p>✉ info@company.com</p>
-  </section>
+<section class="section">
+  <h3 class="title">لماذا تختارنا؟</h3>
+  <div class="why">
+    <div class="why-box">✔ جودة تشطيب عالية</div>
+    <div class="why-box">✔ الالتزام بالمواعيد</div>
+    <div class="why-box">✔ أسعار مناسبة</div>
+    <div class="why-box">✔ فريق محترف وخبرة سنوات</div>
+  </div>
+</section>
 
-  <footer>
-    كل الحقوق محفوظة © شركة الرامز للمقاولات (El Ramez Construction)
-  </footer>
+<section class="section" style="text-align:center;">
+  <h3 class="title">تواصل معنا</h3>
+  <p>📞 <a href="tel:01287575747" style="color:#003366; font-weight:bold;">اتصل الآن</a></p>
+  <p>📍 القاهرة - مصر</p>
+  <p>✉ info@company.com</p>
+</section>
+
+<footer>
+  كل الحقوق محفوظة © شركة الرامز للمقاولات (El Ramez Construction)
+</footer>
 
 </body>
 </html>
