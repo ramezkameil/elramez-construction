@@ -6,56 +6,97 @@
   <title>شركة الرامز للمقاولات (El Ramez Construction)</title>
   <style>
     body { font-family: sans-serif; margin: 0; background: #f5f5f5; }
-
-    /* مستطيل الهيدر */
-    header {
-      width: 100%;
-      background: #ffffff;
-      text-align: center;
-      padding: 10px 0;
-      border-bottom: 3px solid #003366;
-    }
-
-    /* اللوجو */
-    .logo {
+    header { background: #003366; color: #fff; padding: 0; text-align: center; }
+    .hero-logo {
       width: 100%;
       height: auto;
-      max-height: 160px; /* ارتفاع طبيعي مثل الصورة */
-      object-fit: contain;
       display: block;
-      margin: 0 auto;
+      object-fit: contain;
     }
+
+    .hero {
+      background: #ffcc00;
+      color: #000;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .hero h1 { margin-bottom: 10px; font-size: 32px; }
+    .hero p { max-width: 500px; margin: auto; line-height: 1.7; }
 
     .section { padding: 40px 20px; max-width: 1000px; margin: auto; }
     .title { font-size: 26px; margin-bottom: 20px; text-align: center; }
 
-    .projects { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-    .card { background: #fff; border-radius: 10px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: transform .3s ease; }
+    .projects {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform .3s ease;
+      text-align: center;
+    }
+
     .card:hover { transform: translateY(-8px); }
     .card img { width: 100%; border-radius: 8px; }
 
-    .whatsapp-btn { display:block; margin:10px auto; background:#25D366; color:#fff; width:200px; text-align:center; padding:10px; border-radius:8px; font-weight:bold; text-decoration:none; }
+    footer {
+      background: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
 
-    footer { background: #003366; color: #fff; padding: 20px; text-align: center; margin-top: 40px; }
+    .whatsapp-btn {
+      display: block;
+      margin: 15px auto;
+      background: #25D366;
+      color: #fff;
+      width: 200px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity:1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
 
-  <!-- المستطيل + اللوجو بدون تمدد ومع عرض كامل -->
   <header>
-    <img src="logo.jpg" class="logo" alt="لوجو الشركة">
-    <h2>شركة الرامز للمقاولات (El Ramez Construction)</h2>
+    <img src="logo.jpg" alt="لوجو الشركة" class="hero-logo" />
+    <h2 style="margin:10px 0;">شركة الرامز للمقاولات (El Ramez Construction)</h2>
     <p style="margin:0; font-weight:bold;">إدارة الأستاذ: كميل رمزي</p>
   </header>
 
   <a href="https://wa.me/201287575747" class="whatsapp-btn">تواصل واتساب</a>
+
+  <!-- زر صفحة من نحن -->
+  <a href="about.html" class="whatsapp-btn" style="background:#003366;">من نحن</a>
+
+  <section class="hero">
+    <h1>أعمال تشطيبات وبناء باحترافية</h1>
+    <p>خبرة سنوات طويلة في إنشاء وتشطيب المشروعات السكنية والتجارية بأعلى جودة وأفضل تكلفة.</p>
+  </section>
 
   <section class="section">
     <h3 class="title">بعض أعمالنا</h3>
     <div class="projects">
       <div class="card">
         <img src="project1.jpg" alt="مشروع 1" />
-        <h4>تشطيب شقق بالعاصمة الإدارية</h4>
+        <h4>أعمال تشطيبات بالعاصمة الإدارية</h4>
       </div>
       <div class="card">
         <img src="project2.jpg" alt="مشروع 2" />
@@ -63,14 +104,14 @@
       </div>
       <div class="card">
         <img src="project3.jpg" alt="مشروع 3" />
-        <h4>مشروع تجاري بالقاهرة الجديدة</h4>
+        <h4>مشروع الأوبرا بالعاصمة الإدارية (تم التسليم)</h4>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" style="text-align:center;">
     <h3 class="title">تواصل معنا</h3>
-    <p>📞 <a href="tel:01287575747" style="color:#003366; text-decoration:none; font-weight:bold;">اتصل الآن</a></p>
+    <p>📞 <a href="tel:01287575747" style="color:#003366; font-weight:bold;">اتصل الآن</a></p>
     <p>📍 القاهرة - مصر</p>
     <p>✉ info@company.com</p>
   </section>
